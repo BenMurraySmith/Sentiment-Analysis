@@ -30,7 +30,8 @@ def train_and_save_model():
     df.columns = columns
     # -------------------------------------------------------------------------------------------------------------
 
-    # vectorizer object
+    # vectorizer object. TF-IDF (term frequency inverse document frequecy) gives weight to how often a word 
+    # appears in a document vs how common it is in the corpus. A really rare word will be considered very important
     tfidf = TfidfVectorizer(tokenizer=custom_tokenizer, ngram_range=(1,2))
 
     # classifier object
